@@ -1,0 +1,20 @@
+<p>databinding works!</p>
+
+<div>My name is- {{userName}}</div>
+<div>My name is- <span [innerHTML]="userName"></span></div>
+1 way: <input value={{userName}} />&nbsp;
+1 way: <input [value]=userName /> &nbsp;
+2 way: <input [(ngModel)]="userName" /> <br />&nbsp;
+
+<img src={{img_url}} />
+<img [src]=img_url /> <br />
+
+<button disabled={{flag}}>Click Me</button> &nbsp;
+<button [disabled]=flag>Click Me</button> &nbsp;
+
+<button (click)="f1()">show alert</button> &nbsp;
+<hr>
+
+Number-1:: <input #num1 /> <br>
+Number-2:: <input #num2 /> <br>
+<button (click)="addition(num1.value,num2.value)">Add</button>
