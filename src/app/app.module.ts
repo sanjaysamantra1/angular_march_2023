@@ -11,6 +11,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
+import { DirectiveComponent } from './components/directive/directive.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { UsersComponent } from './components/users/users.component';
+import { GreetComponent } from './components/greet/greet.component';
 
 @NgModule({
   // components,pipes,directives
@@ -23,9 +27,13 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
     CarouselComponent,
     CategoriesComponent,
     DatabindingComponent,
+    DirectiveComponent,
+    ProductListComponent,
+    UsersComponent,
+    GreetComponent,
   ],
   // dependent modules
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule],
   // services(Injectables)
   providers: [],
   // which component to load

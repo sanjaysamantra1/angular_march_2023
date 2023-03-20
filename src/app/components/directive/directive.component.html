@@ -1,0 +1,68 @@
+<p>directive works!</p>
+
+<h3 [ngStyle]="n%2==0?{color:'blue',border:'5px dotted red'}
+                                       :{color:'red',border:'5px dotted blue'}">
+    {{n}} is {{n%2==0?'Even':'Odd'}}</h3>
+
+<h3 [ngClass]="n%2==0?'bg-success':'bg-danger' ">
+    {{n}} is {{n%2==0?'Even':'Odd'}} (Using ngClass)
+</h3>
+
+<h3 *ngIf="age >= 18">You are Eligible for voting</h3>
+<h3 *ngIf="age < 18">You are Not Eligible for voting</h3>
+
+
+<h3 *ngIf="age>=18; else notEligibleBlock">
+    You are Eligible for votingggggggggg
+</h3>
+<ng-template #notEligibleBlock>
+    You are Not Eligible for votingggggggggg
+</ng-template>
+
+<h3 [ngSwitch]="dayNumber">
+    <p *ngSwitchCase="1">Monday</p>
+    <p *ngSwitchCase="2">Tuesday</p>
+    <p *ngSwitchCase="3">Wednesday</p>
+    <p *ngSwitchCase="4">Thursday</p>
+    <p *ngSwitchCase="5">Friday</p>
+    <p *ngSwitchCase="6">Saturday</p>
+    <p *ngSwitchCase="0">Sunday</p>
+    <p *ngSwitchDefault>Not a valid number</p>
+</h3>
+
+<ul>
+    <li *ngFor="let city of cities">
+        {{city}}
+    </li>
+</ul>
+
+Cities:
+<select>
+    <option *ngFor="let city of cities">{{city}}</option>
+</select>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Sl No.</th>
+            <th>Eid</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>gender</th>
+            <th>Is First?</th>
+            <th>Is last?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees;let ind=index;let isFirst=first;let isLast=last">
+            <td>{{ind+1}}</td>
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{isFirst}}</td>
+            <td>{{isLast}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
