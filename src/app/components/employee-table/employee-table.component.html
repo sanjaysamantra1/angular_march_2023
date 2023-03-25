@@ -1,0 +1,22 @@
+<h4 class="text-center">Employee Table</h4>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>eid</th>
+            <th>name</th>
+            <th>sal</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees;let i=index">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

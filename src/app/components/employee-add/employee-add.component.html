@@ -1,0 +1,17 @@
+<h4 class="text-center">Add Employee</h4>
+
+<div class="border m-2 p-2">
+    <div>
+        Eid: <input #id />
+    </div>
+    <div class="m-2">
+        Name: <input #name />
+    </div>
+    <div>
+        Salary: <input #sal />
+    </div>
+
+    <button class="m-2" (click)="sendDataToParent(id.value,name.value,sal.value)">
+        Add Employee
+    </button>
+</div>

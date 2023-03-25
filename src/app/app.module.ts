@@ -25,6 +25,10 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/child2/child2.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { EmployeeTableComponent } from './components/employee-table/employee-table.component';
+import { ClsComponent } from './cls/cls.component';
+import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 
 @NgModule({
   // components,pipes,directives
@@ -49,6 +53,10 @@ import { Child2Component } from './components/child2/child2.component';
     ParentComponent,
     Child1Component,
     Child2Component,
+    EmployeesComponent,
+    EmployeeTableComponent,
+    ClsComponent,
+    EmployeeAddComponent,
   ],
   // dependent modules
   imports: [

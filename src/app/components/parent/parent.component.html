@@ -2,13 +2,14 @@
     <div class="row text-center">
         <div>This is Parent Component</div>
         <div>My Own data a is: {{a}}</div>
+        <div>My child comp data name is : {{myName}}</div>
     </div>
     <div class="row">
         <div class="col-sm-6 border">
-            <app-child1 [a]="a"></app-child1>
+            <app-child1 [a]="a" #child1 (nameEvent)="getDataFromChild($event)"></app-child1>
         </div>
         <div class="col-sm-6 border">
-            <app-child2 [aa]="a"></app-child2>
+            <app-child2 [aa]="a" [child1]='child1'></app-child2>
         </div>
     </div>
 </div>

@@ -11,4 +11,9 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void {}
 
   a: number = 10;
+  myName: string = '';
+
+  getDataFromChild(name: string) {
+    this.myName = name;
+  }
 }
