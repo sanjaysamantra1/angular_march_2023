@@ -1,0 +1,14 @@
+<div class="container border">
+    <div class="row text-center">
+        <div>This is Parent Component</div>
+        <div>My Own data a is: {{a}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 border">
+            <app-child1 [a]="a"></app-child1>
+        </div>
+        <div class="col-sm-6 border">
+            <app-child2 [aa]="a"></app-child2>
+        </div>
+    </div>
+</div>
