@@ -1,0 +1,24 @@
+<p>emp works!</p>
+
+<button class="btn btn-primary" (click)="getEmps()">get Employees</button>
+<button class="btn btn-secondary m-2" (click)="getMaleEmps()">get Male Employees</button>
+<button class="btn btn-success" (click)="getFemaleEmps()">get Female Employees</button>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.gender}}</td>
+        </tr>
+    </tbody>
+</table>

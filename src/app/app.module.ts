@@ -29,6 +29,9 @@ import { EmployeesComponent } from './components/employees/employees.component';
 import { EmployeeTableComponent } from './components/employee-table/employee-table.component';
 import { ClsComponent } from './cls/cls.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
+import { MathComponent } from './components/math/math.component';
+import { EmpComponent } from './components/emp/emp.component';
+import { Emp2Component } from './components/emp2/emp2.component';
 
 @NgModule({
   // components,pipes,directives
@@ -57,6 +60,9 @@ import { EmployeeAddComponent } from './components/employee-add/employee-add.com
     EmployeeTableComponent,
     ClsComponent,
     EmployeeAddComponent,
+    MathComponent,
+    EmpComponent,
+    Emp2Component,
   ],
   // dependent modules
   imports: [
