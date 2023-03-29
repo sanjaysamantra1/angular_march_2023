@@ -1,0 +1,42 @@
+<h1 class="text-center">User CRUD Example</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.fname}}</td>
+                        <td>{{user.lname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.sal}}</td>
+                        <td>
+                            <button (click)="deleteUser(user.id)" class="btn btn-danger">DEL</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="!users.length" class="text-center">
+                        No Users Exist
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <h3 class="text-center">Add User Form</h3>
+            <div class="border m-2 p-2">
+                <div>Id: <input #id /></div>
+                <div>FirstName: <input #fname /></div>
+                <div>LastName: <input #lname /></div>
+                <div>Email: <input #email /></div>
+                <div>Phone: <input #phone /></div>
+                <div>Address: <input #address /></div>
+                <div>Salary: <input #sal /></div>
+                <button
+                    (click)="addUser(id.value,fname.value,lname.value,email.value,phone.value,address.value,sal.value)"
+                    class="btn btn-primary">Add User</button>
+            </div>
+        </div>
+    </div>
+</div>

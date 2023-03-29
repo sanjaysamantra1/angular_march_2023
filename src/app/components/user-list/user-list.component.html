@@ -1,0 +1,40 @@
+<h2 class="text-center">List of Users from REST API</h2>
+<button (click)="fetchUsers()" class="btn btn-primary m-2">Fetch users Data</button>
+
+<input type="search" [(ngModel)]="searchText" placeholder="Search User...">
+
+
+
+<h3 class="text-center">Users Card</h3>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let user of users | filter : searchText" class="col-sm-3">
+            <div class="card text-center">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-flat/33/man_5-512.png" class="card-img-top"
+                    style="height:200px">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text">UserName: {{user.username}}</p>
+                    <p class="card-text">Address: {{user.address.city}}</p>
+                    <p class="card-text">Phone: {{user.phone}}</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<h3 class="text-center">Users Table</h3>
+<table class="table table-bordered table-striped">
+    <tbody>
+        <tr *ngFor="let user of users| filter : searchText">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.city}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>

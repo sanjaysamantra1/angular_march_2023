@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,8 @@ import { EmployeeAddComponent } from './components/employee-add/employee-add.com
 import { MathComponent } from './components/math/math.component';
 import { EmpComponent } from './components/emp/emp.component';
 import { Emp2Component } from './components/emp2/emp2.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserCrudComponent } from './components/user-crud/user-crud.component';
 
 @NgModule({
   // components,pipes,directives
@@ -63,6 +66,8 @@ import { Emp2Component } from './components/emp2/emp2.component';
     MathComponent,
     EmpComponent,
     Emp2Component,
+    UserListComponent,
+    UserCrudComponent,
   ],
   // dependent modules
   imports: [
@@ -71,6 +76,7 @@ import { Emp2Component } from './components/emp2/emp2.component';
     FormsModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
   ],
   // services(Injectables)
   providers: [],
