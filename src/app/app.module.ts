@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,6 +35,18 @@ import { EmpComponent } from './components/emp/emp.component';
 import { Emp2Component } from './components/emp2/emp2.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserCrudComponent } from './components/user-crud/user-crud.component';
+import { FormDemo1Component } from './components/form-demo1/form-demo1.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { TemplateDrivenFormClsComponent } from './components/template-driven-form-cls/template-driven-form-cls.component';
+import { ModelDrivenFormComponent } from './components/model-driven-form/model-driven-form.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProductInfoComponent } from './components/product-info/product-info.component';
+import { PermanentJobsComponent } from './components/permanent-jobs/permanent-jobs.component';
+import { ContractJobsComponent } from './components/contract-jobs/contract-jobs.component';
 
 @NgModule({
   // components,pipes,directives
@@ -68,6 +80,18 @@ import { UserCrudComponent } from './components/user-crud/user-crud.component';
     Emp2Component,
     UserListComponent,
     UserCrudComponent,
+    FormDemo1Component,
+    TemplateDrivenFormComponent,
+    TemplateDrivenFormClsComponent,
+    ModelDrivenFormComponent,
+    HomeComponent,
+    AboutusComponent,
+    CareersComponent,
+    NotfoundComponent,
+    ProductDetailsComponent,
+    ProductInfoComponent,
+    PermanentJobsComponent,
+    ContractJobsComponent,
   ],
   // dependent modules
   imports: [
@@ -77,6 +101,7 @@ import { UserCrudComponent } from './components/user-crud/user-crud.component';
     NgxPaginationModule,
     Ng2SearchPipeModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   // services(Injectables)
   providers: [],

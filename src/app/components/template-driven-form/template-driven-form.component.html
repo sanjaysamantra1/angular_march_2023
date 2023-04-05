@@ -1,0 +1,35 @@
+<p>template-driven-form works!</p>
+
+<form #myForm="ngForm" (submit)="submitMyForm(myForm.value)">
+    <div>
+        First Name:
+        <input name="firstName" ngModel required />
+    </div>
+    <div>
+        Last Name:
+        <input name="lastName" ngModel />
+    </div>
+    <div>
+        age:
+        <input name="age" ngModel />
+    </div>
+    <div ngModelGroup="address">
+        <div>
+            City:
+            <input name="city" ngModel />
+        </div>
+        <div>
+            State:
+            <input name="state" ngModel />
+        </div>
+        <div>
+            Pin:
+            <input name="pin" ngModel />
+        </div>
+    </div>
+
+    <input type="reset" value="clear" class="m-1">
+    <input type="submit" value="submit" [disabled]="myForm.invalid">
+</form>
+
+<h2>{{myForm.value | json}}</h2>

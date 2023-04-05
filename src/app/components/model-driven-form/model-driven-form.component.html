@@ -1,0 +1,25 @@
+<p>model-driven-form works!</p>
+
+<form [formGroup]="registerForm">
+    First Name:
+    <input type="text" formControlName="firstname">
+    <span class="text-danger" *ngIf="registerForm.controls.firstname.hasError('required')">FirstName is Required</span>
+    <span class="text-danger" *ngIf="registerForm.controls.firstname.hasError('minlength')">FirstName should be minimum 5 chars long</span>
+
+    last Name:
+    <input type="text" formControlName="lastname">
+
+    <fieldset formGroupName="address">
+        city:
+        <input type="text" formControlName="city">
+        state:
+        <input type="text" formControlName="state">
+        pin:
+        <input type="text" formControlName="pin">
+    </fieldset>
+
+    <input type="reset" value="clear">
+    <input type="submit" value="Submit">
+</form>
+
+<h3>{{registerForm.value|json}}</h3>
